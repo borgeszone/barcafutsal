@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Jugadores</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body class="position-relative">
+    <div class="container">
+      <div class="row">
+        <!-- S1: Lista de Jugadores -->
+        <div class="col-md-4 border-end p-5 position-relative" id="s1">
+          <h5>Jugadors</h5>
+          <div
+            class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 jugadores-lista"
+          >
+            <!-- 21 - Dídac -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Dídac"
+              data-numero="21"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/didac.png"
+            >
+              <img src="/images/didac.png" class="img-thumbnail" />
+              <p class="small">21 - Dídac</p>
+            </div>
+
+            <!-- 26 - Miquel Feixas -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Miquel Feixas"
+              data-numero="26"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/feixas.png"
+            >
+              <img
+                src="/images/feixas.png"
+                alt="Miquel Feixas"
+                class="img-thumbnail"
+              />
+              <p class="small">26 - Feixas</p>
+            </div>
+            <!-- 6 - Antonio -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Antonio"
+              data-numero="6"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/antonio.png"
+            >
+              <img
+                src="/images/antonio.png"
+                alt="Antonio"
+                class="img-thumbnail"
+              />
+              <p class="small">6 - Antonio</p>
+            </div>
+            <!-- 17 - Erick -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Erick"
+              data-numero="17"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/erick.png"
+            >
+              <img src="/images/erick.png" alt="Erick" class="img-thumbnail" />
+              <p class="small">17 - Erick</p>
+            </div>
+            <!-- 3 - Matheus -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Matheus"
+              data-numero="3"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/matheus.png"
+            >
+              <img
+                src="/images/matheus.png"
+                alt="Matheus"
+                class="img-thumbnail"
+              />
+              <p class="small">3 - Matheus</p>
+            </div>
+            <!-- 7 - Dyego -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Dyego"
+              data-numero="7"
+            >
+              <img
+                src="https://via.placeholder.com/60?text=7"
+                alt="Dyego"
+                class="img-thumbnail"
+              />
+              <p class="small">7 - Dyego</p>
+            </div>
+            <!-- 8 - Adolfo -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Adolfo"
+              data-numero="8"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/adolfo.png"
+            >
+              <img
+                src="/images/adolfo.png"
+                alt="Adolfo"
+                class="img-thumbnail"
+              />
+              <p class="small">8 - Adolfo</p>
+            </div>
+            <!-- 9 - Lozano -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Lozano"
+              data-numero="9"
+            >
+              <img
+                src="https://via.placeholder.com/60?text=9"
+                alt="Lozano"
+                class="img-thumbnail"
+              />
+              <p class="small">9 - Lozano</p>
+            </div>
+            <!-- 13 - Catela -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Catela"
+              data-numero="13"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/catela.png"
+            >
+              <img
+                src="/images/catela.png"
+                alt="Catela"
+                class="img-thumbnail"
+              />
+              <p class="small">13 - Catela</p>
+            </div>
+            <!-- 14 - Martel -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Martel"
+              data-numero="14"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/martel.png"
+            >
+              <img
+                src="/images/martel.png"
+                alt="Martel"
+                class="img-thumbnail"
+              />
+              <p class="small">14 - Martel</p>
+            </div>
+            <!-- 16 - Sergio González -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="S. González"
+              data-numero="16"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/sergio.png"
+            >
+              <img
+                src="/images/sergio.png"
+                alt="S. González"
+                class="img-thumbnail"
+              />
+              <p class="small">16 - S. González</p>
+            </div>
+            <!-- 20 - Touré -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Touré"
+              data-numero="20"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/toure.png"
+            >
+              <img src="/images/toure.png" alt="Touré" class="img-thumbnail" />
+              <p class="small">20 - Touré</p>
+            </div>
+            <!-- 22 - Khalid -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Khalid"
+              data-numero="22"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/khalid.png"
+            >
+              <img
+                src="/images/khalid.png"
+                alt="Khalid"
+                class="img-thumbnail"
+              />
+              <p class="small">22 - Khalid</p>
+            </div>
+            <!-- 10 - Pito -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Pito"
+              data-numero="10"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/pito.png"
+            >
+              <img src="/images/pito.png" alt="Pito" class="img-thumbnail" />
+              <p class="small">10 - Pito</p>
+            </div>
+            <!-- 19 - Fits -->
+            <div
+              class="col text-center jugador-card"
+              data-nombre="Fits"
+              data-numero="19"
+              data-posicion="Portero"
+              data-edad="27"
+              data-img="/images/fits.png"
+            >
+              <img src="/images/fits.png" alt="Fits" class="img-thumbnail" />
+              <p class="small">19 - Fits</p>
+            </div>
+            <!-- Botón para añadir nuevo jugador -->
+            <div class="jugador-card text-center border rounded p-2 d-flex flex-column align-items-center justify-content-center add-jugador-card" style="cursor: pointer;background-color: #f0f0f0">
+              <div class="d-flex flex-column align-items-center">
+                  <span style="font-size: 2rem; color: #1a5fad">+</span>
+                <p class="small mt-2">Añadir jugador</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Añadir Jugador -->
+          <div
+            class="modal fade"
+            id="modalAddJugador"
+            tabindex="-1"
+            aria-labelledby="modalAddJugadorLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalAddJugadorLabel">
+                    Nuevo Jugador
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form id="formNuevoJugador">
+                    <div class="mb-3">
+                      <label for="nombreNuevo" class="form-label">Nombre</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombreNuevo"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="numeroNuevo" class="form-label">Número</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="numeroNuevo"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="posicionNuevo" class="form-label"
+                        >Posición</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="posicionNuevo"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="edadNuevo" class="form-label">Edad</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="edadNuevo"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="fotoNuevo" class="form-label"
+                        >URL de la imagen (opcional)</label
+                      >
+                      <input type="url" class="form-control" id="fotoNuevo" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Agregar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- //Notas para escribir cosas pendientes, etc. Se guarden pero como menaje de whatsapp Como si fuera un jugador. -->
+        </div>
+
+        <!-- S2: Información del Jugador -->
+        <div class="col-md-8 p-5" id="s2">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <div class="d-flex align-items-center">
+              <img
+                id="jugador-img"
+                src="https://via.placeholder.com/100"
+                class="rounded-circle me-3"
+              />
+              <div>
+                <h4 id="jugador-nombre">Nombre</h4>
+                <p class="mb-0">Edad: <span id="jugador-edad">--</span></p>
+                <p class="mb-0">
+                  Posición: <span id="jugador-posicion">--</span>
+                </p>
+              </div>
+            </div>
+            <button class="btn btn-outline-primary" onclick="toggleHistorial()">
+              Ver historial
+            </button>
+          </div>
+
+          <!-- Comentarios -->
+          <div class="mb-4">
+            <h5>Comentarios</h5>
+            <div class="mb-3">
+              <textarea
+                id="comentario-input"
+                class="form-control"
+                rows="4"
+                placeholder="Escribe un comentario..."
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <button
+                class="btn"
+                id="btn-comentar"
+                style="background-color: #1a5fad; color: white"
+              >
+                Guardar
+              </button>
+            </div>
+          </div>
+          <!-- Historial overlay (oculto por defecto) -->
+          <div
+            id="historialOverlay"
+            class="overflow-auto timeline d-none"
+            style="max-height: 500px"
+          >
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h6 class="mb-0 h4">Historial de Comentarios</h6>
+              <button
+                class="btn btn-sm btn-outline-danger"
+                onclick="toggleHistorial()"
+              >
+                Cerrar
+              </button>
+            </div>
+            <div class="overflow-auto" style="max-height: 300px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Mostrar modal al hacer clic en el botón
+      document
+        .getElementById("add-jugador-btn")
+        .addEventListener("click", () => {
+          const modal = new bootstrap.Modal(
+            document.getElementById("modalAddJugador")
+          );
+          modal.show();
+        });
+
+      // Manejar el formulario
+      document
+        .getElementById("formNuevoJugador")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nombre = document.getElementById("nombreNuevo").value.trim();
+          const numero = document.getElementById("numeroNuevo").value.trim();
+          const posicion = document
+            .getElementById("posicionNuevo")
+            .value.trim();
+          const edad = document.getElementById("edadNuevo").value.trim();
+          const imgInput = document.getElementById("fotoNuevo").value.trim();
+          const img =
+            imgInput || "https://via.placeholder.com/100x100.png?text=Jugador";
+
+          if (!nombre || !numero || !posicion || !edad || !img) return;
+
+          const nuevaCard = document.createElement("div");
+          nuevaCard.className =
+            "col-12 col-sm-6 col-md-4 col-lg-3 text-center jugador-card";
+          nuevaCard.dataset.nombre = nombre;
+          nuevaCard.dataset.numero = numero;
+          nuevaCard.dataset.posicion = posicion;
+          nuevaCard.dataset.edad = edad;
+          nuevaCard.dataset.img = img;
+
+          nuevaCard.innerHTML = `
+    <img src="${img}" alt="${nombre}" class="img-thumbnail" />
+    <p class="small">${numero} - ${nombre}</p>
+  `;
+
+          // Insertar antes del botón de añadir
+          const container = document.querySelector(".jugadores-lista");
+          container.insertBefore(
+            nuevaCard,
+            document.getElementById("add-jugador-btn")
+          );
+
+          // Cierra el modal
+          bootstrap.Modal.getInstance(
+            document.getElementById("modalAddJugador")
+          ).hide();
+
+          // Vaciar campos
+          this.reset();
+
+          // Asignar evento
+          nuevaCard.addEventListener("click", () => {
+            jugadorActual = nombre;
+            document.getElementById("jugador-nombre").textContent = nombre;
+            document.getElementById("jugador-edad").textContent = edad;
+            document.getElementById("jugador-posicion").textContent = posicion;
+            document.getElementById("jugador-img").src = img;
+            cargarComentarios(nombre);
+          });
+        });
+
+      document.querySelectorAll(".jugador-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const nombre = card.dataset.nombre;
+          const numero = card.dataset.numero;
+          const edad = card.dataset.edad;
+          const posicion = card.dataset.posicion;
+          const img = card.dataset.img;
+
+          document.getElementById("jugador-nombre").textContent = nombre;
+          document.getElementById("jugador-edad").textContent = edad;
+          document.getElementById("jugador-posicion").textContent = posicion;
+          document.getElementById("jugador-img").src = img;
+        });
+      });
+      let jugadorActual = null;
+
+      function cargarComentarios(nombre) {
+        const comentarios =
+          JSON.parse(localStorage.getItem("comentarios_" + nombre)) || [];
+        const contenedor = document.getElementById("comentarios-lista");
+        contenedor.innerHTML = "";
+
+        comentarios
+          .sort((a, b) => new Date(a.fecha) - new Date(b.fecha)) // orden descendente
+          .forEach((c) => {
+            const div = document.createElement("div");
+            div.classList.add("border", "rounded", "p-2", "mb-2", "bg-light");
+            div.innerHTML = `<strong>${c.fecha}</strong><br>${c.texto}`;
+            contenedor.appendChild(div);
+          });
+      }
+
+      function guardarComentario(nombre, texto) {
+        const comentarios =
+          JSON.parse(localStorage.getItem("comentarios_" + nombre)) || [];
+        comentarios.push({
+          texto,
+          fecha: new Date().toISOString(),
+        });
+        localStorage.setItem(
+          "comentarios_" + nombre,
+          JSON.stringify(comentarios)
+        );
+
+        // Solo recargar historial si está visible
+        const overlay = document.getElementById("historialOverlay");
+        if (!overlay.classList.contains("d-none")) {
+          toggleHistorial(); // Cierra
+          toggleHistorial(); // Vuelve a abrir con datos actualizados
+        }
+      }
+
+      document.getElementById("btn-comentar").addEventListener("click", () => {
+        const texto = document.getElementById("comentario-input").value.trim();
+        if (!texto || !jugadorActual) return;
+
+        guardarComentario(jugadorActual, texto);
+        document.getElementById("comentario-input").value = "";
+      });
+
+      // Integración con selección de jugador
+      document.querySelectorAll(".jugador-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const nombre = card.dataset.nombre;
+          const numero = card.dataset.numero;
+          const edad = card.dataset.edad;
+          const posicion = card.dataset.posicion;
+          const img = card.dataset.img;
+
+          jugadorActual = nombre;
+
+          document.getElementById("jugador-nombre").textContent = nombre;
+          document.getElementById("jugador-edad").textContent = edad;
+          document.getElementById("jugador-posicion").textContent = posicion;
+          document.getElementById("jugador-img").src = img;
+
+          cargarComentarios(nombre);
+        });
+      });
+
+      function toggleHistorial() {
+        const overlay = document.getElementById("historialOverlay");
+
+        if (overlay.classList.contains("d-none")) {
+          if (!jugadorActual) return;
+
+          const contenedorOverlay = overlay.querySelector(".overflow-auto");
+          contenedorOverlay.innerHTML = "";
+
+          const comentarios =
+            JSON.parse(localStorage.getItem("comentarios_" + jugadorActual)) ||
+            [];
+
+          if (comentarios.length === 0) {
+            contenedorOverlay.innerHTML = `
+        <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
+          <p class="text-muted">Historial vacío</p>
+        </div>
+      `;
+          } else {
+            comentarios
+              .sort((a, b) => new Date(a.fecha) - new Date(b.fecha))
+              .forEach((c, index) => {
+                const div = document.createElement("div");
+                div.classList.add(
+                  "timeline-entry",
+                  index % 2 === 0 ? "left" : "right"
+                );
+
+                const fechaObj = new Date(c.fecha);
+                const fechaSolo = `${String(fechaObj.getDate()).padStart(
+                  2,
+                  "0"
+                )}-${String(fechaObj.getMonth() + 1).padStart(2, "0")}-${String(
+                  fechaObj.getFullYear()
+                ).slice(-2)}`;
+
+                div.innerHTML = `
+            <div class="border rounded p-2 bg-white position-relative">
+              <div class="mb-1 text-muted small">${fechaSolo}</div>
+              <div class="comentario-texto">${c.texto}</div>
+              <div class="mt-2 text-end">
+                <button class="btn btn-sm btn-outline-secondary me-2 editar-btn">Editar</button>
+                <button class="btn btn-sm btn-outline-danger eliminar-btn">Eliminar</button>
+              </div>
+            </div>
+          `;
+
+                // Eventos de editar y eliminar
+                div
+                  .querySelector(".editar-btn")
+                  .addEventListener("click", () => {
+                    const nuevoTexto = prompt("Editar comentario:", c.texto);
+                    if (nuevoTexto !== null && nuevoTexto.trim() !== "") {
+                      comentarios[index].texto = nuevoTexto.trim();
+                      localStorage.setItem(
+                        "comentarios_" + jugadorActual,
+                        JSON.stringify(comentarios)
+                      );
+                      toggleHistorial(); // recarga historial
+                    }
+                  });
+
+                div
+                  .querySelector(".eliminar-btn")
+                  .addEventListener("click", () => {
+                    if (confirm("¿Eliminar este comentario?")) {
+                      comentarios.splice(index, 1);
+                      localStorage.setItem(
+                        "comentarios_" + jugadorActual,
+                        JSON.stringify(comentarios)
+                      );
+                      toggleHistorial(); // recarga historial
+                    }
+                  });
+
+                contenedorOverlay.appendChild(div);
+              });
+          }
+
+          overlay.classList.remove("d-none");
+        } else {
+          overlay.classList.add("d-none");
+        }
+      }
+
+      function eliminarComentario(nombre, index) {
+        const comentarios =
+          JSON.parse(localStorage.getItem("comentarios_" + nombre)) || [];
+        comentarios.splice(index, 1); // elimina
+        localStorage.setItem(
+          "comentarios_" + nombre,
+          JSON.stringify(comentarios)
+        );
+      }
+
+      function editarComentario(nombre, index) {
+        const comentarios =
+          JSON.parse(localStorage.getItem("comentarios_" + nombre)) || [];
+        const nuevoTexto = prompt(
+          "Editar comentario:",
+          comentarios[index].texto
+        );
+        if (nuevoTexto !== null) {
+          comentarios[index].texto = nuevoTexto.trim();
+          localStorage.setItem(
+            "comentarios_" + nombre,
+            JSON.stringify(comentarios)
+          );
+          toggleHistorial(); // recargar historial
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+
+
+.jugador-card img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.jugador-card p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.jugadores-lista .col {
+  display: flex;
+  justify-content: center;
+}
+
+.jugador-card:hover {
+  transform: scale(1.05);
+}
+
+.comentarios-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.historial-overlay {
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 4px;
+  height: calc(100% - 40px);
+  background-color: #1a5fad;
+  transform: translateX(-50%);
+}
+
+.timeline-entry {
+  position: relative;
+  width: 50%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-entry.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-entry.right {
+  left: 50%;
+}
+
+.add-jugador-card {
+  transition: transform 0.2s ease;
+  background-color: #f9f9f9;
+}
+
+.add-jugador-card:hover {
+  transform: scale(1.05);
+  background-color: #e9f1fb;
+}
+
+
+
+.timeline-entry .content {
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  padding: 0.7rem;
+  display: inline-block;
+  max-width: 90%;
+}
+
+/* ✅ RESPONSIVE TIMELINE PARA MÓVILES */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-entry {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: 2rem;
+  }
+
+  .timeline-entry .content {
+    max-width: 95%;
+  }
+}
