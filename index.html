@@ -20,7 +20,7 @@
       <div class="row">
         <!-- S1: Lista de Jugadores -->
         <div class="col-md-4 border-end p-5 position-relative" id="s1">
-          <h5>Jugadors</h5>
+          <h5>Plantilla</h5>
           <div
             class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 jugadores-lista"
           >
@@ -93,7 +93,7 @@
               data-numero="3"
               data-posicion="Ala"
               data-edad="27"
-              data-img="/images/matheus.jpg"
+              data-img="images/matheus.jpg"
             >
               <img
                 src="images/matheus.jpg"
@@ -108,13 +108,9 @@
               data-numero="8"
               data-posicion="Ala"
               data-edad="27"
-              data-img="/images/adolfo.jpg"
+              data-img="images/adolfo.jpg"
             >
-              <img
-                src="images/adolfo.jpg"
-                alt="Adolfo"
-                class="img-thumbnail"
-              />
+              <img src="images/adolfo.jpg" alt="Adolfo" class="img-thumbnail" />
               <p class="small">8 - Adolfo</p>
             </div>
             <div
@@ -134,13 +130,9 @@
               data-numero="13"
               data-posicion="Ala"
               data-edad="27"
-              data-img="/images/catela.jpg"
+              data-img="images/catela.jpg"
             >
-              <img
-                src="images/catela.jpg"
-                alt="Catela"
-                class="img-thumbnail"
-              />
+              <img src="images/catela.jpg" alt="Catela" class="img-thumbnail" />
               <p class="small">13 - Catela</p>
             </div>
             <div
@@ -151,11 +143,7 @@
               data-edad="27"
               data-img="images/martel.jpg"
             >
-              <img
-                src="images/martel.jpg"
-                alt="Martel"
-                class="img-thumbnail"
-              />
+              <img src="images/martel.jpg" alt="Martel" class="img-thumbnail" />
               <p class="small">14 - Martel</p>
             </div>
             <div
@@ -192,7 +180,7 @@
               data-numero="22"
               data-posicion="Ala"
               data-edad="27"
-              data-img="/images/luciano.jpg"
+              data-img="images/luciano.jpg"
             >
               <img
                 src="images/luciano.jpg"
@@ -310,9 +298,14 @@
                     </div>
                     <div class="mb-3">
                       <label for="fotoNuevo" class="form-label"
-                        >URL de la imagen (opcional)</label
+                        >Imagen desde tu dispositivo</label
                       >
-                      <input type="url" class="form-control" id="fotoNuevo" />
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="fotoNuevo"
+                        accept="image/*"
+                      />
                     </div>
                     <button type="submit" class="btn btn-primary">
                       Agregar
@@ -483,16 +476,61 @@
               .getElementById("posicionNuevo")
               .value.trim();
             const edad = document.getElementById("edadNuevo").value.trim();
-            const imgInput = document.getElementById("fotoNuevo").value.trim();
-            const img =
-              imgInput ||
-              "https://via.placeholder.com/100x100.png?text=Jugador";
+            const fileInput = document.getElementById("fotoNuevo");
+            const file = fileInput.files[0];
+
+            const reader = new FileReader();
+            reader.onload = function (event) {
+              const img =
+                event.target.result ||
+                "https://via.placeholder.com/100x100.png?text=Jugador";
+
+              const nuevaCard = document.createElement("div");
+              nuevaCard.className =
+                "col text-center jugador-card";
+              Object.assign(nuevaCard.dataset, {
+                nombre,
+                numero,
+                posicion,
+                edad,
+                img,
+              });
+
+              nuevaCard.innerHTML = `<img src="${img}" alt="${nombre}" class="img-thumbnail" />
+          <p class="small">${numero} - ${nombre}</p>`;
+
+              const container = document.querySelector(".jugadores-lista");
+              container.insertBefore(
+                nuevaCard,
+                document.getElementById("add-jugador-btn")
+              );
+
+              asignarEventosJugadorCard(nuevaCard);
+              guardarJugadorEnLocalStorage({
+                nombre,
+                numero,
+                posicion,
+                edad,
+                img,
+              });
+
+              bootstrap.Modal.getInstance(
+                document.getElementById("modalAddJugador")
+              ).hide();
+              form.reset();
+            };
+
+            if (file) {
+              reader.readAsDataURL(file); // 👈 convierte a base64
+            } else {
+              alert("Por favor seleccioná una imagen.");
+            }
 
             if (!nombre || !numero || !posicion || !edad) return;
 
             const nuevaCard = document.createElement("div");
             nuevaCard.className =
-              "col-12 col-sm-6 col-md-4 col-lg-3 text-center jugador-card";
+              "col text-center jugador-card";
             Object.assign(nuevaCard.dataset, {
               nombre,
               numero,
@@ -502,18 +540,28 @@
             });
 
             nuevaCard.innerHTML = `<img src="${img}" alt="${nombre}" class="img-thumbnail" />
-              <p class="small">${numero} - ${nombre}</p>`;
+        <p class="small">${numero} - ${nombre}</p>`;
 
             const container = document.querySelector(".jugadores-lista");
             container.insertBefore(nuevaCard, addBtn);
+
+            asignarEventosJugadorCard(nuevaCard);
+
+            guardarJugadorEnLocalStorage({
+              nombre,
+              numero,
+              posicion,
+              edad,
+              img,
+            }); // ✅ Guardar
+
             bootstrap.Modal.getInstance(
               document.getElementById("modalAddJugador")
             ).hide();
             this.reset();
-            asignarEventosJugadorCard(nuevaCard);
           });
         }
-
+        
         function cargarComentarios(nombre) {
           const comentarios =
             JSON.parse(localStorage.getItem("comentarios_" + nombre)) || [];
@@ -571,10 +619,10 @@
 
           if (comentarios.length === 0) {
             contenedor.innerHTML = `
-        <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
-          <p class="text-muted">Historial vacío</p>
-        </div>
-      `;
+              <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
+                <p class="text-muted">Historial vacío</p>
+              </div>
+            `;
             overlay.classList.add("empty");
           } else {
             overlay.classList.remove("empty");
@@ -596,15 +644,15 @@
                 ).slice(-2)}`;
 
                 div.innerHTML = `
-          <div class="border rounded p-2 bg-white position-relative">
-            <div class="mb-1 text-muted small">${fechaTexto}</div>
-            <div class="comentario-texto">${c.texto}</div>
-            <div class="mt-2 text-end">
-              <button class="btn btn-sm btn-outline-secondary me-2 editar-btn">Editar</button>
-              <button class="btn btn-sm btn-outline-danger eliminar-btn">Eliminar</button>
-            </div>
-          </div>
-        `;
+                  <div class="border rounded p-2 bg-white position-relative">
+                    <div class="mb-1 text-muted small">${fechaTexto}</div>
+                    <div class="comentario-texto">${c.texto}</div>
+                    <div class="mt-2 text-end">
+                      <button class="btn btn-sm btn-outline-secondary me-2 editar-btn">Editar</button>
+                      <button class="btn btn-sm btn-outline-danger eliminar-btn">Eliminar</button>
+                    </div>
+                  </div>
+                `;
 
                 div
                   .querySelector(".editar-btn")
