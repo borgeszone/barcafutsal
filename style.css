@@ -28,6 +28,32 @@
   transform: scale(1.05);
 }
 
+.skeleton {
+    background: #e2e5e7;
+    background: linear-gradient(110deg, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 8px;
+  }
+
+  @keyframes shimmer {
+    to {
+      background-position: -200% 0;
+    }
+  }
+
+  .skeleton-img {
+    width: 40%;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .skeleton-line {
+    height: 20px;
+    margin-bottom: 10px;
+    width: 70%;
+  }
+
 .comentarios-container {
   max-height: 300px;
   overflow-y: auto;
@@ -44,6 +70,10 @@
   position: relative;
 }
 
+.timeline.empty {
+  border-left: none;
+}
+
 .timeline::before {
   content: "";
   position: absolute;
@@ -53,6 +83,10 @@
   height: calc(100% - 40px);
   background-color: #1a5fad;
   transform: translateX(-50%);
+}
+
+.timeline.empty::before {
+  display: none;
 }
 
 .timeline-entry {
@@ -107,4 +141,9 @@
   .timeline-entry .content {
     max-width: 95%;
   }
+}
+
+#notas-card:hover {
+  background-color: #fff3cd !important;
+  transition: 0.3s;
 }
