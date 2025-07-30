@@ -4,16 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barça futsal</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <link rel="icon" href="images/logo.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- FullCalendar CSS y JS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <link rel="icon" href="images/logo.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="position-relative">
     <div class="container">
       <div class="row">
         <!-- S1: Lista de Jugadores -->
-        <div class="col-md-4 border-end p-5 position-relative" id="s1">
+        <div class="col-md-4 border-end p-4 position-relative" id="s1">
           <p class="mb-3 h2">Plantilla</p>
           <div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 jugadores-lista mb-5 list-unstyled">
             <div class="col text-center jugador-card"
@@ -28,176 +40,176 @@
 
             <!-- Miquel Feixas -->
             <div class="col text-center jugador-card"
-                data-nombre="Miquel Feixas"
-                data-numero="26"
-                data-posicion="Portero"
-                data-nacimiento="1997-09-04"
-                data-img="images/feixas.jpg">
+              data-nombre="Miquel Feixas"
+              data-numero="26"
+              data-posicion="Portero"
+              data-nacimiento="1997-09-04"
+              data-img="images/feixas.jpg">
               <img src="images/feixas.jpg" alt="Miquel Feixas" class="img-thumbnail" />
               <!-- <p class="small">26 - Feixas</p> -->
             </div>
 
             <!-- Iker (Iker Abad) -->
             <div class="col text-center jugador-card"
-                data-nombre="Iker Abad"
-                data-numero="15"
-                data-posicion="Portero"
-                data-nacimiento="2006-06-15"
-                data-img="images/iker.jpg">
+              data-nombre="Iker Abad"
+              data-numero="15"
+              data-posicion="Portero"
+              data-nacimiento="2006-06-15"
+              data-img="images/iker.jpg">
               <img src="images/iker.jpg" alt="Iker" class="img-thumbnail" />
               <!-- <p class="small">15 - Iker</p> -->
             </div>
 
             <!-- Antonio Pérez Ortega -->
             <div class="col text-center jugador-card"
-                data-nombre="Antonio Pérez Ortega"
-                data-numero="6"
-                data-posicion="Cierre"
-                data-nacimiento="2000-10-19"
-                data-img="images/antonio.jpg">
+              data-nombre="Antonio Pérez Ortega"
+              data-numero="6"
+              data-posicion="Cierre"
+              data-nacimiento="2000-10-19"
+              data-img="images/antonio.jpg">
               <img src="images/antonio.jpg" alt="Antonio" class="img-thumbnail" />
               <!-- <p class="small">6 - Antonio</p> -->
             </div>
 
             <!-- Erick Mendonça -->
             <div class="col text-center jugador-card"
-                data-nombre="Erick Mendonça"
-                data-numero="17"
-                data-posicion="Cierre"
-                data-nacimiento="1995-07-21"
-                data-img="images/erick.jpg">
+              data-nombre="Erick Mendonça"
+              data-numero="17"
+              data-posicion="Cierre"
+              data-nacimiento="1995-07-21"
+              data-img="images/erick.jpg">
               <img src="images/erick.jpg" alt="Erick" class="img-thumbnail" />
               <!-- <p class="small">17 - Erick</p> -->
             </div>
 
             <!-- Matheus Rodrigues -->
             <div class="col text-center jugador-card"
-                data-nombre="Matheus Rodrigues"
-                data-numero="3"
-                data-posicion="Ala"
-                data-nacimiento="1996-10-03"
-                data-img="images/matheus.jpg">
+              data-nombre="Matheus Rodrigues"
+              data-numero="3"
+              data-posicion="Ala"
+              data-nacimiento="1996-10-03"
+              data-img="images/matheus.jpg">
               <img src="images/matheus.jpg" alt="Matheus" class="img-thumbnail" />
               <!-- <p class="small">3 - Matheus</p> -->
             </div>
 
             <!-- Adolfo Fernández Díaz -->
             <div class="col text-center jugador-card"
-                data-nombre="Adolfo Fernández Díaz"
-                data-numero="8"
-                data-posicion="Ala"
-                data-nacimiento="1993-05-19"
-                data-img="images/adolfo.jpg">
+              data-nombre="Adolfo Fernández Díaz"
+              data-numero="8"
+              data-posicion="Ala"
+              data-nacimiento="1993-05-19"
+              data-img="images/adolfo.jpg">
               <img src="images/adolfo.jpg" alt="Adolfo" class="img-thumbnail" />
               <!-- <p class="small">8 - Adolfo</p> -->
             </div>
 
             <!-- Catela (Juan José Camacho Pérez) -->
             <div class="col text-center jugador-card"
-                data-nombre="Juan José Camacho Pérez"
-                data-numero="13"
-                data-posicion="Ala"
-                data-nacimiento="1995-04-14"
-                data-img="images/catela.jpg">
+              data-nombre="Juan José Camacho Pérez"
+              data-numero="13"
+              data-posicion="Ala"
+              data-nacimiento="1995-04-14"
+              data-img="images/catela.jpg">
               <img src="images/catela.jpg" alt="Iker" class="img-thumbnail" />
               <!-- <p class="small">13 - Catela</p> -->
             </div>
 
             <!-- João Victor -->
             <div class="col text-center jugador-card"
-                data-nombre="João Victor"
-                data-numero="20"
-                data-posicion="Ala"
-                data-nacimiento="2000-07-12"
-                data-img="images/joao.jpg">
+              data-nombre="João Victor"
+              data-numero="20"
+              data-posicion="Ala"
+              data-nacimiento="2000-07-12"
+              data-img="images/joao.jpg">
               <img src="images/joao.jpg" alt="Lozano" class="img-thumbnail" />
               <!-- <p class="small">20 - Joao</p> -->
             </div>
 
             <!-- Pol Pacheco -->
             <div class="col text-center jugador-card"
-                data-nombre="Pol Pacheco"
-                data-numero="13"
-                data-posicion="Ala"
-                data-nacimiento="1994-07-11"
-                data-img="images/pacheco.jpg">
+              data-nombre="Pol Pacheco"
+              data-numero="13"
+              data-posicion="Ala"
+              data-nacimiento="1994-07-11"
+              data-img="images/pacheco.jpg">
               <img src="images/pacheco.jpg" alt="Pol" class="img-thumbnail" />
               <!-- <p class="small">13 - Pol</p> -->
             </div>
 
             <!-- Eric Martel García -->
             <div class="col text-center jugador-card"
-                data-nombre="Eric Martel García"
-                data-numero="14"
-                data-posicion="Ala"
-                data-nacimiento="1992-02-24"
-                data-img="images/martel.jpg">
+              data-nombre="Eric Martel García"
+              data-numero="14"
+              data-posicion="Ala"
+              data-nacimiento="1992-02-24"
+              data-img="images/martel.jpg">
               <img src="images/martel.jpg" alt="Martel" class="img-thumbnail" />
               <!-- <p class="small">14 - Martel</p> -->
             </div>
 
             <!-- Sergio González Pérez -->
             <div class="col text-center jugador-card"
-                data-nombre="Sergio González Pérez"
-                data-numero="16"
-                data-posicion="Ala"
-                data-nacimiento="1997-06-30"
-                data-img="images/sergio.jpg">
+              data-nombre="Sergio González Pérez"
+              data-numero="16"
+              data-posicion="Ala"
+              data-nacimiento="1997-06-30"
+              data-img="images/sergio.jpg">
               <img src="images/sergio.jpg" alt="S. González" class="img-thumbnail" />
               <!-- <p class="small">16 - S. González</p> -->
             </div>
 
             <!-- Touré (Mamadou Siragassy Touré) -->
             <div class="col text-center jugador-card"
-                data-nombre="Mamadou Siragassy Touré"
-                data-numero="20"
-                data-posicion="Ala"
-                data-nacimiento="2001-09-15"
-                data-img="images/toure.jpg">
+              data-nombre="Mamadou Siragassy Touré"
+              data-numero="20"
+              data-posicion="Ala"
+              data-nacimiento="2001-09-15"
+              data-img="images/toure.jpg">
               <img src="images/toure.jpg" alt="Touré" class="img-thumbnail" />
               <!-- <p class="small">20 - Touré</p> -->
             </div>
 
             <!-- Luciano Gauna -->
             <div class="col text-center jugador-card"
-                data-nombre="Luciano Gauna"
-                data-numero="22"
-                data-posicion="Ala"
-                data-nacimiento="2001-02-24"
-                data-img="images/luciano.jpg">
+              data-nombre="Luciano Gauna"
+              data-numero="22"
+              data-posicion="Ala"
+              data-nacimiento="2001-02-24"
+              data-img="images/luciano.jpg">
               <img src="images/luciano.jpg" alt="Luciano" class="img-thumbnail" />
               <!-- <p class="small">22 - Luciano</p> -->
             </div>
 
             <!-- Rubén Rodó -->
             <div class="col text-center jugador-card"
-                data-nombre="Rubén Rodó"
-                data-numero="24"
-                data-posicion="Ala"
-                data-nacimiento="2005-05-08"
-                data-img="images/ruben.jpg">
+              data-nombre="Rubén Rodó"
+              data-numero="24"
+              data-posicion="Ala"
+              data-nacimiento="2005-05-08"
+              data-img="images/ruben.jpg">
               <img src="images/ruben.jpg" alt="Rubén Rodó" class="img-thumbnail" />
               <!-- <p class="small">24 - Rubén Rodó</p> -->
             </div>
 
             <!-- Pito (Jean Pierre Guisel Costa) -->
             <div class="col text-center jugador-card"
-                data-nombre="Jean Pierre Guisel Costa"
-                data-numero="10"
-                data-posicion="Pívot"
-                data-nacimiento="1991-11-06"
-                data-img="images/pito.jpg">
+              data-nombre="Jean Pierre Guisel Costa"
+              data-numero="10"
+              data-posicion="Pívot"
+              data-nacimiento="1991-11-06"
+              data-img="images/pito.jpg">
               <img src="images/pito.jpg" alt="Pito" class="img-thumbnail" />
               <!-- <p class="small">10 - Pito</p> -->
             </div>
 
             <!-- Fits (Rafael Nogueira da Silva) -->
             <div class="col text-center jugador-card"
-                data-nombre="Rafael Nogueira da Silva"
-                data-numero="19"
-                data-posicion="Pívot"
-                data-nacimiento="1992-05-23"
-                data-img="images/fits.jpg">
+              data-nombre="Rafael Nogueira da Silva"
+              data-numero="19"
+              data-posicion="Pívot"
+              data-nacimiento="1992-05-23"
+              data-img="images/fits.jpg">
               <img src="images/fits.jpg" alt="Fits" class="img-thumbnail" />
               <!-- <p class="small">19 - Fits</p> -->
             </div>
@@ -210,14 +222,19 @@
               </div>
             </div>
           </div>
-          <!-- Botón de Notas -->
-          <div
-            class="text-center mt-4"
-            id="notas-icono"
-            style="cursor: pointer"
-          >
-            <i class="fa-regular fa-clipboard fa-xl"></i>
-            <p class="small mt-1">Notas</p>
+          <!-- Botones: Notas y Calendario juntos -->
+          <div class="d-flex justify-content-center gap-4 mt-3">
+            <!-- Botón Notas -->
+            <div id="notas-icono" style="cursor: pointer; text-align: center">
+              <i class="fa-regular fa-note-sticky fa-xl"></i>
+              <p class="small mt-1">Notas</p>
+            </div>
+
+            <!-- Botón Calendario -->
+            <div id="calendario-icono" style="cursor: pointer; text-align: center">
+              <i class="fa-regular fa-calendar-days fa-xl"></i>
+              <p class="small mt-1">Calendario</p>
+            </div>
           </div>
 
           <!-- Modal Añadir Jugador -->
@@ -303,7 +320,7 @@
         </div>
 
         <!-- S2: Información del Jugador -->
-        <div class="col-md-8 p-5" id="s2">
+        <div class="col-md-8 p-4" id="s2">
           <!-- Skeleton: por defecto visible -->
           <div id="jugador-skeleton">
             <div class="d-flex align-items-center justify-content-between mb-3">
@@ -317,12 +334,17 @@
               </div>
             </div>
           </div>
+          <!-- Panel con FullCalendar -->
+          <div id="calendario-panel" style="display: none">
+            <p class="h2 mb-4">Calendario Médico</p>
+            <div id="fullcalendar"></div>
+          </div>
 
           <!-- Contenido real del jugador (oculto inicialmente) -->
           <div id="jugador-info" style="display: none">
             <div class="d-flex align-items-center justify-content-between mb-4">
               <div class="d-flex align-items-center">
-                <img id="jugador-img" class="rounded-circle me-3" style="width: 9.375rem; height: 9.375rem; object-fit: cover;" />
+                <img id="jugador-img" class="rounded-circle me-3" style="width: 9.375rem; height: 9.375rem; object-fit: cover;"/>
                 <div>
                   <p class="h4" id="jugador-nombre">Nombre</p>
                   <p class="mb-0">Edad: <span id="jugador-edad">--</span></p>
@@ -414,20 +436,24 @@
 
           jugadorActual = nombre;
 
-          const imgSrc = img || "https://via.placeholder.com/100x100.png?text=Jugador";
-          document.getElementById("jugador-nombre").textContent = nombre;
-          document.getElementById("jugador-posicion").textContent = posicion;
-          document.getElementById("jugador-img").src = imgSrc;
+          const imgSrc =
+            img || "https://via.placeholder.com/100x100.png?text=Jugador";
+            document.getElementById("jugador-nombre").textContent = nombre;
+            document.getElementById("jugador-posicion").textContent = posicion;
+            document.getElementById("jugador-img").src = imgSrc;
 
           if (nacimiento) {
             const edadCalculada = calcularEdad(nacimiento);
-            document.getElementById("jugador-edad").textContent = `${edadCalculada} años`;
+            document.getElementById(
+              "jugador-edad"
+            ).textContent = `${edadCalculada} años`;
           } else {
             document.getElementById("jugador-edad").textContent = "--";
           }
-
-          document.getElementById("jugador-info").style.display = "block";
+          document.getElementById("calendario-panel").style.display = "none";
+          document.getElementById("notas-panel").style.display = "none";
           document.getElementById("jugador-skeleton").style.display = "none";
+          document.getElementById("jugador-info").style.display = "block";
 
           cargarComentarios(nombre);
         }
@@ -456,8 +482,7 @@
 
           jugadores.forEach(({ nombre, numero, posicion, edad, img }) => {
             const nuevaCard = document.createElement("div");
-            nuevaCard.className =
-              "col text-center jugador-card";
+            nuevaCard.className = "col text-center jugador-card";
             Object.assign(nuevaCard.dataset, {
               nombre,
               numero,
@@ -512,8 +537,7 @@
                 "https://via.placeholder.com/100x100.png?text=Jugador";
 
               const nuevaCard = document.createElement("div");
-              nuevaCard.className =
-                "col text-center jugador-card";
+              nuevaCard.className = "col text-center jugador-card";
               Object.assign(nuevaCard.dataset, {
                 nombre,
                 numero,
@@ -555,8 +579,7 @@
             if (!nombre || !numero || !posicion || !edad) return;
 
             const nuevaCard = document.createElement("div");
-            nuevaCard.className =
-              "col text-center jugador-card";
+            nuevaCard.className = "col text-center jugador-card";
             Object.assign(nuevaCard.dataset, {
               nombre,
               numero,
@@ -732,6 +755,7 @@
           notasIcono.addEventListener("click", () => {
             document.getElementById("jugador-info").style.display = "none";
             document.getElementById("jugador-skeleton").style.display = "none";
+            document.getElementById("calendario-panel").style.display = "none";
             document.getElementById("notas-panel").style.display = "block";
             cargarNotasGenerales();
           });
@@ -800,6 +824,139 @@
 
             document.getElementById("nota-general-input").value = "";
             cargarNotasGenerales();
+          });
+        }
+
+        // Mostrar el calendario
+        const calendarioIcono = document.getElementById("calendario-icono");
+        if (calendarioIcono) {
+          calendarioIcono.addEventListener("click", () => {
+            document.getElementById("jugador-info").style.display = "none";
+            document.getElementById("notas-panel").style.display = "none";
+            document.getElementById("jugador-skeleton").style.display = "none";
+            document.getElementById("calendario-panel").style.display = "block";
+
+            if (!window.calendarioIniciado) {
+              iniciarCalendario();
+              window.calendarioIniciado = true;
+            }
+          });
+        }
+
+        // Iniciar FullCalendar con edición, eliminación y guardado local
+        function iniciarCalendario() {
+          const calendarEl = document.getElementById("fullcalendar");
+          const eventosGuardados =
+            JSON.parse(localStorage.getItem("eventosCalendario")) || [];
+
+          const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: "dayGridMonth",
+            locale: "es",
+            selectable: true,
+            editable: true,
+            eventDidMount: function (info) {
+              const acciones = document.createElement("div");
+              acciones.className = "event-actions";
+
+              // Botón editar
+              const btnEditar = document.createElement("button");
+              btnEditar.textContent = "Editar";
+              btnEditar.className = "editar";
+              btnEditar.onclick = (e) => {
+                e.stopPropagation();
+                const nuevoTitulo = prompt(
+                  "Nuevo título del evento:",
+                  info.event.title
+                );
+                if (nuevoTitulo) {
+                  info.event.setProp("title", nuevoTitulo);
+                  guardarEventosLocalmente(info.view.calendar);
+                }
+              };
+
+              // Botón eliminar
+              const btnEliminar = document.createElement("button");
+              btnEliminar.textContent = "Eliminar";
+              btnEliminar.className = "eliminar";
+              btnEliminar.onclick = (e) => {
+                e.stopPropagation();
+                const confirmar = confirm(
+                  `¿Eliminar el evento "${info.event.title}"?`
+                );
+                if (confirmar) {
+                  info.event.remove();
+                  guardarEventosLocalmente(info.view.calendar);
+                }
+              };
+
+              acciones.appendChild(btnEditar);
+              acciones.appendChild(btnEliminar);
+              info.el.appendChild(acciones);
+            },
+            dateClick: function (info) {
+              const fecha = info.dateStr;
+              const hora = prompt(
+                "Introduce la hora del evento (24h, ej. 14:30):"
+              );
+              if (!hora) return;
+              const titulo = prompt("Introduce el título del evento:");
+              if (!titulo) return;
+
+              const start = new Date(`${fecha}T${hora}`);
+              const end = new Date(start.getTime() + 30 * 60 * 1000);
+
+              calendar.addEvent({
+                title: titulo,
+                start: start.toISOString(),
+                end: end.toISOString(),
+              });
+
+              guardarEventosLocalmente(calendar);
+
+              // Abrir Google Calendar
+              const formatDate = (d) =>
+                d.toISOString().replace(/-|:|\.\d+/g, "");
+              const url =
+                `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+                `&text=${encodeURIComponent(titulo)}` +
+                `&dates=${formatDate(start)}/${formatDate(end)}` +
+                `&details=${encodeURIComponent(
+                  "Consulta médica con jugador"
+                )}` +
+                `&sf=true&output=xml`;
+              window.open(url, "_blank");
+            },
+          });
+
+          // Cargar eventos guardados localmente
+          eventosGuardados.forEach((evento) => calendar.addEvent(evento));
+
+          calendar.render();
+
+          window.miCalendario = calendar; // por si quieres acceder desde consola
+        }
+
+        // Guardar eventos actuales en localStorage
+        function guardarEventosLocalmente(calendar) {
+          const eventos = calendar.getEvents().map((event) => ({
+            title: event.title,
+            start: event.start.toISOString(),
+            end: event.end.toISOString(),
+          }));
+          localStorage.setItem("eventosCalendario", JSON.stringify(eventos));
+        }
+
+        function mostrarSoloPanel(idVisible) {
+          const paneles = [
+            "jugador-info",
+            "jugador-skeleton",
+            "notas-panel",
+            "calendario-panel",
+          ];
+
+          paneles.forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) el.style.display = id === idVisible ? "block" : "none";
           });
         }
       });

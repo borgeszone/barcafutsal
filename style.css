@@ -1,4 +1,7 @@
-
+a {
+  color: #2c3e50;
+  text-decoration: none;
+}
 
 .jugador-card img {
   width: 100%;
@@ -134,4 +137,115 @@
 #notas-card:hover {
   background-color: #fff3cd !important;
   transition: 0.3s;
+}
+
+/* calendar event */
+#calendario-panel {
+  width: 100%;
+  padding: 10px;
+}
+
+#fullcalendar {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* General */
+.fc {
+  font-size: 14px;
+}
+
+.fc-event {
+  font-size: 0.8rem;
+  padding: 2px 4px;
+}
+
+/* Hover y botones */
+.fc-event:hover {
+  z-index: 1000;
+  transform: scale(1.05);
+  background-color: #d4f4dd !important;
+}
+
+.event-actions {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 4px;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.fc-event:hover .event-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.event-actions button {
+  padding: 2px 6px;
+  font-size: 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.editar {
+  background: #4caf50;
+  color: white;
+}
+
+.eliminar {
+  background: #f44336;
+  color: white;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  .fc {
+    font-size: 12px;
+  }
+
+  .fc-toolbar-title {
+    font-size: 1rem;
+  }
+
+  .fc-event {
+    font-size: 0.7rem;
+    padding: 1px 3px;
+  }
+
+  .event-actions {
+    flex-direction: column;
+    top: auto;
+    bottom: -60px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .event-actions button {
+    font-size: 10px;
+    padding: 3px;
+  }
+}
+
+.fc-daygrid-event-dot {
+  border: calc(var(--fc-daygrid-event-dot-width) / 2) solid #c65ed3;
+}
+
+.fc-event-time {
+  font-weight: bold;
+}
+
+.fc-event-title {
+  font-weight: 500 !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #d6dcef;
 }
